@@ -7,6 +7,11 @@
     <string name="x_axis_textview_sep">X-Axis</string>
     <string name="y_axis_textview_sep">Y-Axis</string>
     <string name="z_axis_textview_sep">Z-Axis</string>
+    <string name="accelerometer_title">Accelerometer</string>
+    <string name="set_alarm_button">Set Alarm for 10 Seconds</string>
+    <string name="accelerometer_button">Accelerometer</string>
+    <string name="alarm_text">Alarm Set for 10 seconds.</string>
+    <string name="alarm">Alarm</string>
     
 
 </resources>
