@@ -54,6 +54,7 @@ public class AccelerometerFragment extends Fragment implements SensorEventListen
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent,
 			Bundle savedInstanceState) {
+		getActivity().setTitle(R.string.accelerometer_title);
 		mView = inflater.inflate(R.layout.fragment_accelerometer, parent, false);
 		return mView;
 	}
