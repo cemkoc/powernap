@@ -52,17 +52,15 @@ public class AlarmFragment extends Fragment {
 	
 	private void setAlarm() {
 		Intent i = new Intent(getActivity(), AlarmBroadcastReceiver.class);
-		//i.setAction(Intent.ACTION_MAIN);
-		//i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 		mAlarmIntent = PendingIntent.getBroadcast(getActivity(), REQUEST_CODE,
                 i, 0);
 		int alarmType = AlarmManager.ELAPSED_REALTIME_WAKEUP;
-        final int TEN_SEC_MILLIS = 10000;
+        final int FIVE_SEC_MILLIS = 5000;
         
         AlarmManager alarmManager = (AlarmManager)
                 getActivity().getSystemService(getActivity().ALARM_SERVICE);
         
-        alarmManager.set(alarmType, SystemClock.elapsedRealtime() + TEN_SEC_MILLIS, mAlarmIntent);
+        alarmManager.set(alarmType, SystemClock.elapsedRealtime() + FIVE_SEC_MILLIS, mAlarmIntent);
         Toast.makeText(getActivity(), R.string.alarm_text, Toast.LENGTH_SHORT).show();
 	}
 	
