@@ -16,9 +16,18 @@
     <color name="light_blue">#33B5E5</color>
     <color name="dark_blue">#0099CC</color>
     <string name="countdown">17:36</string>
+<<<<<<< HEAD
+=======
     <string name="quick_inst">After 5 minutes of inactivity, the alarm will begin.</string>
+<<<<<<< HEAD
+>>>>>>> 8ae0d71044c0b5eee11f8716258c81f0b8042a6a
+    
+=======
     <string name="cancel_text">Alarm has started | Cancel alarm</string>
     <string name="alarm_canceled">Alarm has been canceled.</string>
+<<<<<<< HEAD
+>>>>>>> 8044c2933b397638ea6ad05372cedcd074e2b8c3
+=======
     <string name="time_must_wake_by">Must wake before this time:</string>
     <string name="alarm_canceled2">A power nap now will make you sleep past your desired wake-up time. Alarm
         canceling.</string>
@@ -39,5 +48,6 @@
     <string name="about_text">PowerNap was built by UC Berkeley undergraduates Brian Su, Can Koc, Cem Koc, Vineet, Alan,
          and Raymond at HackTech 2014. Visit the founders at www.brianysu.com.</string>
     <string name="about_title">About</string>
+>>>>>>> brian/master
 
 </resources>
