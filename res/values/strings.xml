@@ -17,6 +17,10 @@
     <color name="light_blue">#33B5E5</color>
     <color name="dark_blue">#0099CC</color>
     <string name="countdown">17:36</string>
+<<<<<<< HEAD
+=======
+    <string name="quick_inst">After 5 minutes of inactivity, the alarm will begin.</string>
+>>>>>>> 8ae0d71044c0b5eee11f8716258c81f0b8042a6a
     
 
 </resources>

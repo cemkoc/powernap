@@ -1,5 +1,7 @@
 package com.brianysu.powernap;
 
+import java.util.ArrayList;
+
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -7,15 +9,17 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AccelerometerFragment extends Fragment implements SensorEventListener {
 
+	private static final String TAG = "accelerometer";
 	private float mLastX, mLastY, mLastZ;
+	private long mStartTime;
 	private View mView;
 	
 	private boolean mInitialized;
@@ -64,7 +68,6 @@ public class AccelerometerFragment extends Fragment implements SensorEventListen
 		TextView tvX= (TextView) mView.findViewById(R.id.x_axis_textview);
 		TextView tvY= (TextView) mView.findViewById(R.id.y_axis_textview);
 		TextView tvZ= (TextView) mView.findViewById(R.id.z_axis_textview);
-		//ImageView iv = (ImageView)findViewById(R.id.image);
 		float x = event.values[0];
 		float y = event.values[1];
 		float z = event.values[2];
@@ -72,6 +75,7 @@ public class AccelerometerFragment extends Fragment implements SensorEventListen
 			mLastX = x;
 			mLastY = y;
 			mLastZ = z;
+			mStartTime = System.currentTimeMillis();
 			tvX.setText("0.0");
 			tvY.setText("0.0");
 			tvZ.setText("0.0");
@@ -89,15 +93,35 @@ public class AccelerometerFragment extends Fragment implements SensorEventListen
 			tvX.setText(Float.toString(deltaX));
 			tvY.setText(Float.toString(deltaY));
 			tvZ.setText(Float.toString(deltaZ));
-//			iv.setVisibility(View.VISIBLE);
-//			if (deltaX > deltaY) {
-//				iv.setImageResource(R.drawable.horizontal);
-//			} else if (deltaY > deltaX) {
-//				iv.setImageResource(R.drawable.vertical);
-//			} else {
-//				iv.setVisibility(View.INVISIBLE);
-//			}
+			checkAwake();
 		}
+	}
+	
+	private boolean checkAwake() {
+		if (mLastX > 10 || mLastY > 10 || mLastZ > 10) {
+			ArrayList<Float> list = new ArrayList<Float>();
+			list.add(mLastX);
+			list.add(mLastY);
+			list.add(mLastZ);
+			float avg, total = 0;
+			for (int i = 0; i < list.size(); i++) {
+				total += i;
+			}
+			avg = total / list.size();
+			Log.d(TAG, "User is still awake " + avg);
+			reset();
+		} else {
+			long currentTime = System.currentTimeMillis();
+			if (currentTime - mStartTime > 5000) {
+				Log.d(TAG, "User is asleep");
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private void reset() {
+		mStartTime = System.currentTimeMillis();
 	}
 	
 	public static Fragment newInstance() {
