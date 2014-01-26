@@ -8,9 +8,14 @@
 package com.brianysu.powernap;
 
 public final class R {
+    public static final class array {
+        public static final int appColorValues=0x7f060001;
+        public static final int appColors=0x7f060000;
+    }
     public static final class attr {
     }
     public static final class color {
+<<<<<<< HEAD
 <<<<<<< HEAD
         public static final int dark_blue=0x7f060001;
         public static final int light_blue=0x7f060000;
@@ -28,11 +33,16 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
+=======
+        public static final int dark_blue=0x7f080001;
+        public static final int light_blue=0x7f080000;
+>>>>>>> brian/master
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
+<<<<<<< HEAD
 <<<<<<< HEAD
         public static final int action_settings=0x7f090008;
         public static final int alarm_time=0x7f090004;
@@ -54,13 +64,31 @@ public final class R {
         public static final int y_axis_textview=0x7f0a0002;
         public static final int z_axis_textview=0x7f0a0003;
 >>>>>>> 8ae0d71044c0b5eee11f8716258c81f0b8042a6a
+=======
+        public static final int about_page=0x7f0b0002;
+        public static final int accel=0x7f0b0003;
+        public static final int alarm_time=0x7f0b0007;
+        public static final int dialog_time_timePicker=0x7f0b0001;
+        public static final int fragmentContainer=0x7f0b0000;
+        public static final int menu_settings=0x7f0b000b;
+        public static final int must_wake_text=0x7f0b0008;
+        public static final int set_alarm_button=0x7f0b0009;
+        public static final int settings_text_view=0x7f0b000a;
+        public static final int x_axis_textview=0x7f0b0004;
+        public static final int y_axis_textview=0x7f0b0005;
+        public static final int z_axis_textview=0x7f0b0006;
+>>>>>>> brian/master
     }
     public static final class layout {
         public static final int activity_fragment=0x7f030000;
-        public static final int fragment_accelerometer=0x7f030001;
-        public static final int fragment_alarm=0x7f030002;
+        public static final int dialog_time=0x7f030001;
+        public static final int fragment_about=0x7f030002;
+        public static final int fragment_accelerometer=0x7f030003;
+        public static final int fragment_alarm=0x7f030004;
+        public static final int show_settings_layout=0x7f030005;
     }
     public static final class menu {
+<<<<<<< HEAD
 <<<<<<< HEAD
         public static final int accelerometer=0x7f080000;
     }
@@ -81,11 +109,15 @@ public final class R {
         public static final int z_axis_textview_sep=0x7f050005;
 =======
         public static final int accelerometer=0x7f090000;
+=======
+        public static final int settings=0x7f0a0000;
+>>>>>>> brian/master
     }
     public static final class raw {
-        public static final int uplift=0x7f040000;
+        public static final int uplift=0x7f050000;
     }
     public static final class string {
+<<<<<<< HEAD
         public static final int accelerometer_button=0x7f060008;
         public static final int accelerometer_title=0x7f060006;
         public static final int action_settings=0x7f060001;
@@ -104,6 +136,40 @@ public final class R {
         public static final int y_axis_textview_sep=0x7f060004;
         public static final int z_axis_textview_sep=0x7f060005;
 >>>>>>> 8ae0d71044c0b5eee11f8716258c81f0b8042a6a
+=======
+        public static final int about_text=0x7f07001e;
+        public static final int about_title=0x7f07001f;
+        public static final int accelerometer_button=0x7f070007;
+        public static final int accelerometer_title=0x7f070005;
+        public static final int alarm=0x7f070009;
+        public static final int alarm_canceled=0x7f07000f;
+        public static final int alarm_canceled2=0x7f070011;
+        public static final int alarm_text=0x7f070008;
+        public static final int app_name=0x7f070000;
+        public static final int cancel_text=0x7f07000e;
+        public static final int countdown=0x7f07000c;
+        public static final int customize=0x7f07000b;
+        public static final int menu_settings=0x7f070001;
+        public static final int must_wake_up=0x7f07000a;
+        public static final int prefKeyResetQuests=0x7f070018;
+        public static final int pref_about=0x7f07001d;
+        public static final int pref_appearance=0x7f070017;
+        public static final int pref_calibrate_dialog_message=0x7f070019;
+        public static final int pref_calibrate_summary=0x7f070015;
+        public static final int pref_calibrate_title=0x7f070016;
+        public static final int pref_color_frequency=0x7f070013;
+        public static final int pref_colors_summary=0x7f070012;
+        public static final int pref_func_setting=0x7f070014;
+        public static final int pref_time_dialog_title=0x7f07001b;
+        public static final int pref_time_message=0x7f07001a;
+        public static final int pref_time_summary=0x7f07001c;
+        public static final int quick_inst=0x7f07000d;
+        public static final int set_alarm_button=0x7f070006;
+        public static final int time_must_wake_by=0x7f070010;
+        public static final int x_axis_textview_sep=0x7f070002;
+        public static final int y_axis_textview_sep=0x7f070003;
+        public static final int z_axis_textview_sep=0x7f070004;
+>>>>>>> brian/master
     }
     public static final class style {
         /** 
@@ -128,6 +194,7 @@ public final class R {
  API 14 theme customizations can go here. 
          */
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
@@ -140,5 +207,15 @@ public final class R {
          */
         public static final int AppTheme=0x7f080001;
 >>>>>>> 8ae0d71044c0b5eee11f8716258c81f0b8042a6a
+=======
+        public static final int AppBaseTheme=0x7f090000;
+        /**  Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here. 
+         */
+        public static final int AppTheme=0x7f090001;
+    }
+    public static final class xml {
+        public static final int settings=0x7f040000;
+>>>>>>> brian/master
     }
 }
