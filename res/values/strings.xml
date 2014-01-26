@@ -20,7 +20,12 @@
 <<<<<<< HEAD
 =======
     <string name="quick_inst">After 5 minutes of inactivity, the alarm will begin.</string>
+<<<<<<< HEAD
 >>>>>>> 8ae0d71044c0b5eee11f8716258c81f0b8042a6a
     
+=======
+    <string name="cancel_text">Alarm has started | Cancel alarm</string>
+    <string name="alarm_canceled">Alarm has been canceled.</string>
+>>>>>>> 8044c2933b397638ea6ad05372cedcd074e2b8c3
 
 </resources>
