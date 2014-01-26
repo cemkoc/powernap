@@ -18,6 +18,7 @@
     <color name="dark_blue">#0099CC</color>
     <string name="countdown">17:36</string>
     <string name="quick_inst">After 5 minutes of inactivity, the alarm will begin.</string>
-    
+    <string name="cancel_text">Alarm has started | Cancel alarm</string>
+    <string name="alarm_canceled">Alarm has been canceled.</string>
 
 </resources>

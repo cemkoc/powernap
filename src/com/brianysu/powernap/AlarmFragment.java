@@ -25,9 +25,11 @@ public class AlarmFragment extends Fragment implements SensorEventListener {
 
 	private static final String TAG = "alarmfragment";
 	
+	private TextView mTimer;
 	private Button mAlarmButton;
 	private PendingIntent mAlarmIntent;
 	public static final int REQUEST_CODE = 0;
+	private View v;
 	
 	private float mLastX, mLastY, mLastZ;
 	private long mStartTime;
@@ -46,18 +48,10 @@ public class AlarmFragment extends Fragment implements SensorEventListener {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent,
 			Bundle savedInstanceState) {
-		View v = inflater.inflate(R.layout.fragment_alarm, parent, false);
+		v = inflater.inflate(R.layout.fragment_alarm, parent, false);
 		
-		mAlarmButton = (Button) v.findViewById(R.id.set_alarm_button);
-		mAlarmButton.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				initializeAccelerometer();
-				Log.d(TAG, "Accelerometer initialized");
-			}
-			
-		});
+		resetButton();
+		mTimer = (TextView) v.findViewById(R.id.alarm_time);
 		return v;
 	}
 	
@@ -74,17 +68,34 @@ public class AlarmFragment extends Fragment implements SensorEventListener {
 	
 	private void setAlarm(int numMin) {
 		
-		Intent i = new Intent(getActivity(), AlarmBroadcastReceiver.class);
-		mAlarmIntent = PendingIntent.getBroadcast(getActivity(), REQUEST_CODE,
-                i, 0);
-		int alarmType = AlarmManager.ELAPSED_REALTIME_WAKEUP;
-        final int ONE_SEC_MILLIS = 1000;
-        
-        AlarmManager alarmManager = (AlarmManager)
-                getActivity().getSystemService(getActivity().ALARM_SERVICE);
-        
-        alarmManager.set(alarmType, SystemClock.elapsedRealtime() + ONE_SEC_MILLIS * 5, mAlarmIntent);
+		final Duration alarm = new Duration(10 * 1000, 1000, mTimer, getActivity(), this);
+		alarm.start();
+		mAlarmButton.setText(R.string.cancel_text);
+		mAlarmButton.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				alarm.end();
+				Toast.makeText(getActivity(), R.string.alarm_canceled, Toast.LENGTH_LONG).show();
+				resetButton();
+			}
+			
+		});
         Toast.makeText(getActivity(), R.string.alarm_text, Toast.LENGTH_SHORT).show();
+	}
+	
+	public void resetButton() {
+		mAlarmButton = (Button) v.findViewById(R.id.set_alarm_button);
+		mAlarmButton.setText(R.string.set_alarm_button);
+		mAlarmButton.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				initializeAccelerometer();
+				Log.d(TAG, "Accelerometer initialized");
+			}
+			
+		});
 	}
 	
 	@Override
@@ -177,4 +188,6 @@ public class AlarmFragment extends Fragment implements SensorEventListener {
 		fragment.setArguments(args);
 		return fragment;
 	}
+	
+	
 }
