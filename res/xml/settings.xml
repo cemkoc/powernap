@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+ 
+    <PreferenceCategory android:title="@string/pref_appearance" >
+        <ListPreference
+            android:key="prefColors"
+            android:entries="@array/appColors"
+            android:summary="@string/pref_colors_summary"
+            android:entryValues="@array/appColorValues"
+            android:title="@string/pref_color_frequency"
+            android:defaultValue="blue" />
+        
+    </PreferenceCategory>
+     
+    <PreferenceCategory android:title="@string/pref_func_setting" >
+        
+        <com.brianysu.powernap.OptionDialogPreference
+            android:key="prefCalibrate"
+            android:summary="@string/pref_calibrate_summary"
+            android:title="@string/pref_calibrate_title"
+            android:dialogMessage="@string/pref_calibrate_dialog_message"
+             />
+        
+        <EditTextPreference
+            android:key="prefTimer"
+            android:title="Alarm Duration"
+            android:dialogTitle="Set alarm duration"
+            android:summary="Set Alarm Duration"
+            android:defaultValue="20" />
+        
+        <EditTextPreference
+            android:key="prefSleep"
+            android:title="Sleep Time"
+            android:dialogTitle="Set the time needed to fall asleep"
+            android:summary="Set the time needed to fall asleep" />
+        
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/pref_about" >
+        
+        <Preference
+            android:key="about"
+            android:title="About this app" >
+            <intent android:action=".AboutActivity"/>
+        </Preference>
+        
+    </PreferenceCategory>
+ 
+</PreferenceScreen>

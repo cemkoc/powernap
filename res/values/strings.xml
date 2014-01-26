@@ -2,17 +2,16 @@
 <resources>
 
     <string name="app_name">PowerNap</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
     <string name="x_axis_textview_sep">X-Axis</string>
     <string name="y_axis_textview_sep">Y-Axis</string>
     <string name="z_axis_textview_sep">Z-Axis</string>
     <string name="accelerometer_title">Accelerometer</string>
-    <string name="set_alarm_button">Set Alarm for 10 Seconds</string>
+    <string name="set_alarm_button">Alarm Set for 20 minutes.</string>
     <string name="accelerometer_button">Accelerometer</string>
-    <string name="alarm_text">Alarm Set for 10 seconds.</string>
+    <string name="alarm_text">Alarm Set</string>
     <string name="alarm">Alarm</string>
-    <string name="must_wake_up">Must Wake Up: 18:00</string>
+    <string name="must_wake_up">Must Wake Up By: 18:00</string>
     <string name="customize">Customize</string>
     <color name="light_blue">#33B5E5</color>
     <color name="dark_blue">#0099CC</color>
@@ -20,5 +19,25 @@
     <string name="quick_inst">After 5 minutes of inactivity, the alarm will begin.</string>
     <string name="cancel_text">Alarm has started | Cancel alarm</string>
     <string name="alarm_canceled">Alarm has been canceled.</string>
+    <string name="time_must_wake_by">Must wake before this time:</string>
+    <string name="alarm_canceled2">A power nap now will make you sleep past your desired wake-up time. Alarm
+        canceling.</string>
+        
+    
+    <string name="pref_colors_summary">Change App Colors</string>
+    <string name="pref_color_frequency">App Colors</string>
+    <string name="pref_func_setting">Functionality</string>
+    <string name="pref_calibrate_summary">Calibrate the Accelerometer (Coming Soon)</string>
+    <string name="pref_calibrate_title">Calibrate</string>
+    <string name="pref_appearance">Personalize</string>
+    <string name="prefKeyResetQuests">Reset</string>
+    <string name="pref_calibrate_dialog_message">Place the phone on your sleeping surface for 5 seconds. (Coming soon)</string>
+    <string name="pref_time_message">Your desired alarm length:</string>
+    <string name="pref_time_dialog_title">Alarm Length</string>
+    <string name="pref_time_summary">Change the Alarm Length</string>
+    <string name="pref_about">About</string>
+    <string name="about_text">PowerNap was built by UC Berkeley undergraduates Brian Su, Can Koc, Cem Koc, Vineet, Alan,
+         and Raymond at HackTech 2014. Visit the founders at www.brianysu.com.</string>
+    <string name="about_title">About</string>
 
 </resources>
