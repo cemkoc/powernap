@@ -3,22 +3,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="bottom"
-    android:layout_marginBottom="48dp"
-    android:layout_marginLeft="4dp"
-    android:layout_marginRight="4dp" >
+    android:gravity="center"
+    android:background="@color/light_blue" >
     
+    <TextView
+        android:id="@+id/alarm_time"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="64dp"
+        android:layout_marginTop="42dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/countdown" />  
+    
+    <TextView
+		android:id="@+id/must_wake_text"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:gravity="center"
+		android:textSize="16dp"
+		android:textColor="#FFFFFF"
+		android:text="@string/must_wake_up"
+		/>
+
     <Button
         android:id="@+id/set_alarm_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/set_alarm_button" />
-    
-    <Button
-        android:id="@+id/accelerometer_button"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/dark_blue"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/set_alarm_button"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/customize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/accelerometer_button" />
-    
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/customize"
+        />
+        
 
 </LinearLayout>
