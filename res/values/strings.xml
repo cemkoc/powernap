@@ -12,6 +12,11 @@
     <string name="accelerometer_button">Accelerometer</string>
     <string name="alarm_text">Alarm Set for 10 seconds.</string>
     <string name="alarm">Alarm</string>
+    <string name="must_wake_up">Must Wake Up: 18:00</string>
+    <string name="customize">Customize</string>
+    <color name="light_blue">#33B5E5</color>
+    <color name="dark_blue">#0099CC</color>
+    <string name="countdown">17:36</string>
     
 
 </resources>
